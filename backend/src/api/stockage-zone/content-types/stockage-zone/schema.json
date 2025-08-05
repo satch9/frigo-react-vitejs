@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stockage_zones",
+  "info": {
+    "singularName": "stockage-zone",
+    "pluralName": "stockage-zones",
+    "displayName": "Stockage zone"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

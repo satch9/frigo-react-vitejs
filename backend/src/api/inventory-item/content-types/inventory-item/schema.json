@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_items",
+  "info": {
+    "singularName": "inventory-item",
+    "pluralName": "inventory-items",
+    "displayName": "InventoryItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer"
+    },
+    "purchaseDate": {
+      "type": "date"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "household": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::household.household"
+    },
+    "household_item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::household.household",
+      "mappedBy": "inventory_item"
+    }
+  }
+}

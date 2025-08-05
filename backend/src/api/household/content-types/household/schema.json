@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "households",
+  "info": {
+    "singularName": "household",
+    "pluralName": "households",
+    "displayName": "Household"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "inventory_item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory-item.inventory-item",
+      "inversedBy": "household_item"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "household"
+    }
+  }
+}
